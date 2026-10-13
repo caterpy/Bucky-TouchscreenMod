@@ -2,7 +2,7 @@
 
 Turns an ESP32 into a standalone touchscreen-controlled Bluetooth keyboard- Capable of injecting scripts. 
 
-![:D]([image-url-or-path](https://github.com/caterpy/Bucky-TouchscreenMod/blob/main/buckytouchscreen.jpg))
+![:D](https://github.com/caterpy/Bucky-TouchscreenMod/blob/main/buckytouchscreen.jpg)
 
 ## Board Used
 
