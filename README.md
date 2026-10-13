@@ -9,6 +9,7 @@ Turns an ESP32 into a standalone touchscreen-controlled Bluetooth keyboard- It i
 - **Display controller:** ILI9341
 - **Touch controller:** XPT2046 resistive touchscreen
 - **Microcontroller:** ESP32-WROOM-32
+- [Amazon](https://www.amazon.ca/ELEGOO-Display-Acrylic-Protector-Projects/dp/B0FJQJZYXG/ref=sr_1_5?crid=3GR6J1B67R0W6&dib=eyJ2IjoiMSJ9.eoTCAj9Xi5hjuVhlCTysKSR5ZmfGqjP_DJOC5h0yriOxAOtzzpBTIqygVCzwzXKbaQLQDjGKDsk4IoNHAGruKJfgGhkKIen5dAy8OsBuJgRbI7TIfZ7AcW0c5gd8YWxzqMUJOu_LbA3C6puKEPTkDpisUtCFgOYRZWdGu4DitTZJue65jCIdE1VJJ0zrJFt-2geOdC-Sv4Llj4YSCOMPyQ2RWToe0dfTE2JV1Ro2u2T40yohVTOnSa-jps6VN9bkLjlQLDrBoj4o4_8ukHGPfhhMhU8CBVr2p47A6bCAsfI.50UI7pDGTSVcwMMUEMf4VO_i0X2c-CJZkAIikaNRSgk&dib_tag=se&keywords=esp32%2Bdisplay&qid=1791918947&s=electronics&sprefix=esp32%2Celectronics%2C82&sr=1-5&th=1)
 
 ## Functions
 
