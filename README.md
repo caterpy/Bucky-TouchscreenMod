@@ -1,25 +1,25 @@
-![Bucky](https://raw.githubusercontent.com/rylena/Bucky/refs/heads/main/Bucky.png)
+# Bucky ESP32 Touchscreen Mod
 
-# Bucky
+Turns an ESP32 into a standalone touchscreen-controlled Bluetooth keyboard- It is capable of injecting scripts. 
 
-Bucky is a Bluetooth-enabled keystroke injector built with an ESP32, allowing remote execution of keyboard inputs on Windows, Linux, and macOS. It emulates a Bluetooth keyboard, supporting commands like text input, key combinations, delays, and Ducky Script for automation. Ideal for security testing and automation, Bucky enables users to execute scripts wirelessly via the serial monitor. learn more here:https://rylena.github.io/Bucky/
+## Board Used
 
+- **Model:** ESP32-2432S028R
+- **Display:** 2.8-inch 320 × 240 TFT
+- **Display controller:** ILI9341
+- **Touch controller:** XPT2046 resistive touchscreen
+- **Microcontroller:** ESP32-WROOM-32
 
-# Quick Start Demo
+## Functions
 
-![Demo Preview](https://raw.githubusercontent.com/rylena/Bucky/refs/heads/main/demo.gif)
+- QWERTY keyboard
+- Windows and keyboard shortcuts
+- Run scripts
+- Rename Bluetooth ID
+- Reset Bluetooth address (Unpair)
+- Turn the screen off while keeping Bluetooth active, Wake the screen with five taps
 
-# Table of Contents
-
-- [Project Title](#project-title)
-- [Quick Start Demo](#quick-start-demo)
-- [Table of Contents](#table-of-contents)
-- [Installation](#installation)
-- [Usage](#usage)
-
-
-# Installation
-[(Back to top)](#table-of-contents)
+## Installation
 
 ### 1. Install Arduino IDE  
 Download and install the [Arduino IDE](https://www.arduino.cc/en/software) on your computer.  
@@ -29,49 +29,37 @@ Download and install the [Arduino IDE](https://www.arduino.cc/en/software) on yo
 2. Add the following URL to **Additional Board Manager URLs:**https://dl.espressif.com/dl/package_esp32_index.json
 3. Open **Tools** → **Board** → **Boards Manager**, search for "ESP32", and install it.  
 
-### 3. Install Required Library  
+### 3. Install Required Libraries  
 1. Download the **ESP32-BLE-Keyboard** library from [GitHub](https://github.com/T-vK/ESP32-BLE-Keyboard).  
 2. In Arduino IDE, go to **Sketch** → **Include Library** → **Add .ZIP Library**, then select the downloaded ZIP file.  
+3: In the same manner: Add the included **TFT_eSPImod.zip** and **touchscreen** .zip files to the project. 
 
-### 4. Upload the Code to ESP32  
-1. Connect the ESP32 to your computer via USB.  
-2. Select the correct **Board** (ESP32 Dev Module) and **Port** in Arduino IDE.
-3. Download the code from ([Releases](https://github.com/rylena/Bucky/releases/tag/bucky))
-4. Click **Upload** to flash the code.  
+### Upload the Sketch
 
-### 5. Open Serial Monitor  
-- Use **PuTTY** or the Arduino Serial Monitor to connect at **115200 baud rate**.  
-- Once initialized, "Bucky" will appear in the list of available Bluetooth devices.  
+1. Open `buckyfork.ino` in Arduino IDE.
+2. Select **ESP32 Dev Module**.
+3. Select the board's COM port.
+4. Click **Verify**.
+5. Click **Upload**.
+6. Restart the board after the upload completes.
 
+### 5. Pair the Keyboard
 
-# Usage
-[(Back to top)](#table-of-contents)
+1. Open Bluetooth settings on the computer.
+2. Choose **Add device**.
+3. Select **Bluetooth**.
+4. Select the name shown by Bucky.
+5. Wait for the touchscreen status to show **CONNECTED**.
 
-## Available Commands  
+## Screen Controls
 
-### **Basic Commands**  
-- **`clear`** – Clears the terminal screen.  
-- **`pair`** – Scans for nearby Bluetooth devices.  
-- **`rename <name>`** – Renames the Bluetooth device.  
+- **TYPE TEXT:** Compose and send text using the touchscreen keyboard.
+- **QUICK KEYS:** Send common shortcuts such as Win+R, Win+D, Ctrl+C, and Alt+Tab.
+- **SCRIPTS:** Run the included example scripts.
+- **RENAME:** Change the Bluetooth device name and restart the ESP32.
+- **RESET:** Remove saved BLE bonds, generate a new Bluetooth address, and restart.
+- **SCREEN OFF:** Turn off the display backlight. Tap the screen five times within four seconds to wake it.
 
-### **Typing Commands**  
-- **`STRING <text>`** – Types the specified text.  
-- **`SPACE`** – Presses the spacebar.  
-- **`ENTER`** – Presses the Enter key.  
-- **`DELAY <ms>`** – Waits for the specified milliseconds before continuing.  
+## Notes
+- this is a work in progress
 
-### **Key Combination Commands**  
-- **`WIN/META`** – Presses the Windows (Meta) key.  
-- **`WIN/META <key>`** – Performs a Windows/Meta key combination (e.g., `WIN r`).  
-- **`CTRL/ALT/SHIFT <key>`** – Sends a key combination (e.g., `CTRL c` for Copy).  
-
-### **Script Mode**  
-- **`script`** – Enables script mode for pasting and executing **Ducky Script**.  
-
----
-
-## Usage Example  
-
-1. Connect to Bucky via Bluetooth.  
-2. Open a terminal or text editor.  
-3. Run the following commands:  
