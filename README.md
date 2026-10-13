@@ -21,15 +21,15 @@ Turns an ESP32 into a standalone touchscreen-controlled Bluetooth keyboard- It i
 
 ## Installation
 
-### 1. Install Arduino IDE  
+### Install Arduino IDE  
 Download and install the [Arduino IDE](https://www.arduino.cc/en/software) on your computer.  
 
-### 2. Install ESP32 Board Support  
+### Install ESP32 Board Support  
 1. Open **File** → **Preferences**  
 2. Add the following URL to **Additional Board Manager URLs:**https://dl.espressif.com/dl/package_esp32_index.json
 3. Open **Tools** → **Board** → **Boards Manager**, search for "ESP32", and install it.  
 
-### 3. Install Required Libraries  
+### Install Required Libraries  
 1. Download the **ESP32-BLE-Keyboard** library from [GitHub](https://github.com/T-vK/ESP32-BLE-Keyboard).  
 2. In Arduino IDE, go to **Sketch** → **Include Library** → **Add .ZIP Library**, then select the downloaded ZIP file.  
 3: In the same manner: Add the included **TFT_eSPImod.zip** and **touchscreen** .zip files to the project. 
@@ -43,7 +43,7 @@ Download and install the [Arduino IDE](https://www.arduino.cc/en/software) on yo
 5. Click **Upload**.
 6. Restart the board after the upload completes.
 
-### 5. Pair the Keyboard
+### Pair the Keyboard
 
 1. Open Bluetooth settings on the computer.
 2. Choose **Add device**.
